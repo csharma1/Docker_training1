@@ -1,0 +1,31 @@
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker images
+REPOSITORY                                                           TAG                IMAGE ID       CREATED             SIZE
+fact                                                                 v1                 5dfbc5c0731b   58 minutes ago      42.4MB
+factorial                                                            v1                 3f971ffa4cf2   About an hour ago   42.4MB
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker run -it fact:v1
+Enter a number to Find Factorial: 5
+Factorial of 5 is: 120
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker run -it fact:v1
+Enter a number to Find Factorial: 6
+Factorial of 6 is: 720
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker run -it fact:v1
+Enter a number to Find Factorial: -1
+Can't find Factorial for number less than zero
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker run -it fib:v1
+Enter a number to Find Fib sequence : 10
+Fibonacci sequence:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker run -it fib:v1
+Enter a number to Find Fib sequence : 20
+Fibonacci sequence:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+[ec2-user@ip-174-0-9-44 fibonacci]$
+[ec2-user@ip-174-0-9-44 fibonacci]$ docker run -it fib:v1
+Enter a number to Find Fib sequence : 0
+Plese enter a positive integer
+Traceback (most recent call last):
+  File "/app/fibonacci.py", line 16, in <module>
+    print (fib)
+NameError: name 'fib' is not defined
+[ec2-user@ip-174-0-9-44 fibonacci]$
+
